@@ -9,7 +9,7 @@ export default function Home() {
         <div className="text-3xl p-5 text-gray-400 font-thin mb-6">
           Crypto DNS
         </div>
-        <div className="relative bg-yellow-300">
+        <div>
           <AddAddress />
         </div>
       </div>
