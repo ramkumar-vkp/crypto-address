@@ -268,9 +268,12 @@ export const cryptosSlice = createSlice({
         }
       });
     },
+    loadInitialData: (state, action) => {
+      state.currencies = action.payload;
+    },
   },
 });
 
-export const { addCrypto } = cryptosSlice.actions;
+export const { addCrypto, loadInitialData } = cryptosSlice.actions;
 
 export default cryptosSlice.reducer;

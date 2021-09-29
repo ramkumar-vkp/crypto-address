@@ -1,6 +1,9 @@
 export default function Record({ address }) {
   return (
-    <div className="flex flex-row px-2 py-1 border-gray-700 border-b-2">
+    <div
+      className="flex flex-row px-2 py-1 border-gray-700 border-b-2"
+      key={address}
+    >
       <div className="flex-auto">{address}</div>
       <svg
         xmlns="http://www.w3.org/2000/svg"

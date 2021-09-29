@@ -73,7 +73,10 @@ export default function AddAddress() {
                             required="required"
                           >
                             {cryptos.map((curr, key) => (
-                              <option key={key} className="font-thin text-sm">
+                              <option
+                                key={curr.name}
+                                className="font-thin text-sm"
+                              >
                                 {curr.name}
                               </option>
                             ))}
