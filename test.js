@@ -3,7 +3,7 @@ const currencies = [
     name: "aave",
     symbol: "aave",
     logo: "/logos/aave-aave-logo.svg",
-    address: [],
+    address: ["test", "test2"],
   },
   {
     name: "algorand",
@@ -20,10 +20,12 @@ const currencies = [
 ];
 
 let addAddress = "aave";
+let address = "test2";
 
 currencies.forEach((obj) => {
   if (obj.name == addAddress) {
-    obj.address.push("Test");
+    let index = obj.address.indexOf(address);
+    obj.address.splice(index, 1);
   }
 });
 

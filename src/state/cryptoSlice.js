@@ -271,9 +271,18 @@ export const cryptosSlice = createSlice({
     loadInitialData: (state, action) => {
       state.currencies = action.payload;
     },
+    deleteCrypto: (state, action) => {
+      state.currencies.forEach((obj) => {
+        if (obj.name == action.payload.name) {
+          let index = obj.address.indexOf(action.payload.address);
+          obj.address.splice(index, 1);
+        }
+      });
+    },
   },
 });
 
-export const { addCrypto, loadInitialData } = cryptosSlice.actions;
+export const { addCrypto, deleteCrypto, loadInitialData } =
+  cryptosSlice.actions;
 
 export default cryptosSlice.reducer;
