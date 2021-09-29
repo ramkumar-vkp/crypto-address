@@ -1,4 +1,4 @@
-import "tailwindcss/tailwind.css";
+import "../tailwind.css";
 import { store } from "../src/state/store";
 import { Provider } from "react-redux";
 
